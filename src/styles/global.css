@@ -1,0 +1,718 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PHARMACY SOA — Design System v3
+   Modern SaaS + Healthcare · Emerald Primary · Accessible
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@theme {
+  /* ── Primary (Long Châu Blue) ── */
+  --color-primary-50: #e8f0fe;
+  --color-primary-100: #d2e3fc;
+  --color-primary-200: #a8c7fa;
+  --color-primary-300: #7aabf5;
+  --color-primary-400: #5e9cf5;
+  --color-primary-500: #1b74e4;
+  --color-primary-600: #1557b0;
+  --color-primary-700: #0f408a;
+  --color-primary-800: #0a2d66;
+
+  /* ── Brand aliases ── */
+  --color-brand-50: var(--color-primary-50);
+  --color-brand-100: var(--color-primary-100);
+  --color-brand-500: var(--color-primary-500);
+  --color-brand-600: var(--color-primary-600);
+  --color-brand-700: var(--color-primary-700);
+
+  /* ── Semantic colors ── */
+  --color-success-50: #f0fdf4;
+  --color-success-500: #22c55e;
+  --color-success-600: #16a34a;
+  --color-success-700: #15803d;
+  --color-warning-50: #fffbeb;
+  --color-warning-500: #f59e0b;
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+  --color-danger-50: #fef2f2;
+  --color-danger-500: #ef4444;
+  --color-danger-600: #dc2626;
+  --color-danger-700: #b91c1c;
+  --color-info-50: #eff6ff;
+  --color-info-500: #3b82f6;
+  --color-info-600: #2563eb;
+  --color-info-700: #1d4ed8;
+
+  /* ── Surfaces ── */
+  --color-bg: #f8fafb;
+  --color-surface: #ffffff;
+  --color-border: #e2e8f0;
+
+  /* ── Portal accents ── */
+  --color-buyer: #1b74e4;
+  --color-pharma: #1b74e4;
+  --color-admin: #1b74e4;
+
+  /* ── Spacing scale ── */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --page-padding: var(--space-lg);
+  --card-padding: var(--space-md);
+  --section-gap: var(--space-lg);
+
+  /* ── Typography scale ── */
+  --font-size-display: 1.875rem;
+  --font-size-heading: 1.25rem;
+  --font-size-subheading: 1rem;
+  --font-size-body: 0.875rem;
+  --font-size-caption: 0.75rem;
+
+  /* ── Motion system ── */
+  --duration-fast: 150ms;
+  --duration-normal: 250ms;
+  --duration-slow: 400ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* ── Layout ── */
+  --sidebar-width: 260px;
+  --topbar-height: 60px;
+  --shop-header-height: 64px;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+}
+
+@layer base {
+  body {
+    @apply text-slate-900 antialiased;
+    background: var(--color-bg);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #c1c9d4;
+    border-radius: 999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+}
+
+@layer components {
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     APP SHELL — admin + pharma sidebar layout
+     ══════════════════════════════════════════════════════════════════════════ */
+  .app-shell {
+    @apply flex min-h-screen;
+  }
+
+  .main-area {
+    @apply flex flex-1 flex-col min-h-screen;
+    margin-left: var(--sidebar-width);
+  }
+
+  .page-content {
+    @apply flex-1 p-6 lg:p-8;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     SIDENAV
+     ══════════════════════════════════════════════════════════════════════════ */
+  .sidenav {
+    @apply fixed left-0 top-0 bottom-0 flex flex-col bg-white border-r;
+    border-color: var(--color-border);
+    width: var(--sidebar-width);
+    z-index: 40;
+  }
+
+  .sidenav .logo {
+    @apply flex items-center gap-2.5 px-5 font-extrabold text-lg tracking-tight;
+    height: var(--topbar-height);
+    border-bottom: 1px solid var(--color-border);
+    color: var(--color-primary-500);
+  }
+
+  .sidenav-section {
+    @apply px-5 pt-6 pb-2 text-[11px] font-semibold uppercase tracking-wider text-slate-400;
+  }
+
+  .sidenav a {
+    @apply flex items-center gap-3 px-5 py-2.5 text-sm font-medium text-slate-600 transition-all duration-150;
+    border-left: 3px solid transparent;
+  }
+
+  .sidenav a:hover {
+    @apply text-slate-900;
+    background: var(--color-primary-50);
+  }
+
+  .sidenav a.active {
+    @apply font-semibold;
+    background: var(--color-primary-50);
+    color: var(--color-primary-600);
+    border-left-color: var(--color-primary-500);
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     TOPBAR — pharma/admin
+     ══════════════════════════════════════════════════════════════════════════ */
+  .topbar {
+    @apply flex items-center justify-between px-6 bg-white/90 backdrop-blur;
+    border-bottom: 1px solid var(--color-border);
+    height: var(--topbar-height);
+    position: sticky;
+    top: 0;
+    z-index: 30;
+  }
+
+  .topbar-left {
+    @apply text-lg font-bold text-slate-900 tracking-tight;
+  }
+
+  .topbar-right {
+    @apply flex items-center gap-4;
+  }
+
+  .user-info {
+    @apply text-xs font-medium text-slate-500 bg-slate-100 rounded-full px-3 py-1;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     SHOP LAYOUT — buyer/public (header + content)
+     ══════════════════════════════════════════════════════════════════════════ */
+  .page-shell {
+    min-height: 100vh;
+    background: var(--color-bg);
+  }
+
+  .page-container {
+    @apply mx-auto w-full max-w-7xl px-4 py-6 md:px-6 lg:px-8;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     SHOP HEADER
+     ══════════════════════════════════════════════════════════════════════════ */
+  .shop-header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: linear-gradient(135deg, var(--color-primary-500) 0%, var(--color-primary-700) 100%);
+    box-shadow: 0 2px 8px rgba(21, 87, 176, 0.15);
+  }
+
+  .shop-header-inner {
+    @apply mx-auto flex max-w-7xl items-center gap-4 px-4 md:px-6 lg:px-8;
+    height: var(--shop-header-height);
+  }
+
+  .shop-search {
+    @apply flex-1 flex items-center gap-2 rounded-full bg-white/95 px-4 py-2.5 text-sm transition-all duration-200;
+    max-width: 560px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  }
+
+  .shop-search:focus-within {
+    @apply bg-white;
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.5), 0 2px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .shop-search input {
+    @apply flex-1 bg-transparent text-sm text-slate-900 outline-none placeholder:text-slate-400;
+  }
+
+  .shop-nav-link {
+    @apply text-sm font-semibold text-white/85 transition-colors duration-150;
+  }
+
+  .shop-nav-link:hover {
+    @apply text-white;
+  }
+
+  .shop-nav-link.active {
+    @apply text-white;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+  }
+
+  .shop-icon-btn {
+    @apply relative flex items-center justify-center rounded-full text-white/85 transition-colors duration-150;
+    width: 36px;
+    height: 36px;
+  }
+
+  .shop-icon-btn:hover {
+    @apply text-white;
+    background: rgba(255, 255, 255, 0.12);
+  }
+
+  .shop-badge-count {
+    @apply absolute -right-1 -top-1 inline-flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-red-500 px-1 text-[10px] font-bold text-white;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     LOGIN / REGISTER
+     ══════════════════════════════════════════════════════════════════════════ */
+  .login-page {
+    @apply flex min-h-screen items-center justify-center p-4;
+    background: linear-gradient(135deg, #e8f0fe 0%, var(--color-bg) 50%, #e8f0fe 100%);
+  }
+
+  .login-card {
+    @apply w-full max-w-sm rounded-2xl bg-white p-8 shadow-lg;
+    border: 1px solid var(--color-border);
+  }
+
+  .login-card h1 {
+    @apply text-2xl font-extrabold tracking-tight text-center mb-1;
+    color: var(--color-primary-500);
+  }
+
+  .login-card p {
+    @apply text-sm text-slate-500 text-center mb-6;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     PAGE SECTIONS
+     ══════════════════════════════════════════════════════════════════════════ */
+  .page-title {
+    @apply text-2xl font-extrabold tracking-tight text-slate-900 mb-4;
+  }
+
+  .page-section {
+    @apply rounded-2xl bg-white p-4 md:p-6 mb-6;
+    border: 1px solid var(--color-border);
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     FORM HELPERS
+     ══════════════════════════════════════════════════════════════════════════ */
+  .input-row {
+    @apply flex flex-wrap items-end gap-3 mb-4;
+  }
+
+  .input-group {
+    @apply flex flex-col gap-1;
+  }
+
+  .input-group label {
+    @apply text-sm font-medium text-slate-700;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     CARDS
+     ══════════════════════════════════════════════════════════════════════════ */
+  .card {
+    @apply rounded-2xl bg-white shadow-sm transition-shadow duration-200 hover:shadow-md;
+    border: 1px solid var(--color-border);
+  }
+
+  .card-body {
+    @apply p-4 md:p-6;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     INPUTS
+     ══════════════════════════════════════════════════════════════════════════ */
+  .input {
+    @apply w-full rounded-xl bg-white px-4 py-3 text-sm text-slate-900 outline-none transition-all duration-200 placeholder:text-slate-400;
+    border: 1.5px solid var(--color-border);
+  }
+
+  .input:focus {
+    border-color: var(--color-primary-500);
+    box-shadow: 0 0 0 3px var(--color-primary-50);
+  }
+
+  .select {
+    @apply w-full rounded-xl bg-white px-4 py-3 text-sm text-slate-900 outline-none transition-all duration-200;
+    border: 1.5px solid var(--color-border);
+  }
+
+  .select:focus {
+    border-color: var(--color-primary-500);
+    box-shadow: 0 0 0 3px var(--color-primary-50);
+  }
+
+  .textarea {
+    @apply w-full rounded-xl bg-white px-4 py-3 text-sm text-slate-900 outline-none transition-all duration-200 placeholder:text-slate-400;
+    border: 1.5px solid var(--color-border);
+    resize: vertical;
+  }
+
+  .textarea:focus {
+    border-color: var(--color-primary-500);
+    box-shadow: 0 0 0 3px var(--color-primary-50);
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     BUTTONS
+     ══════════════════════════════════════════════════════════════════════════ */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold text-white disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:scale-100;
+    background: linear-gradient(135deg, var(--color-primary-500), var(--color-primary-700));
+    box-shadow: 0 2px 6px rgba(21, 87, 176, 0.25);
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+
+  .btn-primary:hover {
+    background: linear-gradient(135deg, var(--color-primary-400), var(--color-primary-600));
+    box-shadow: 0 4px 12px rgba(21, 87, 176, 0.3);
+    transform: scale(1.02);
+  }
+
+  .btn-primary:active {
+    transform: scale(0.98);
+  }
+
+  .btn-primary:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-white px-5 py-2.5 text-sm font-semibold text-slate-700 hover:bg-slate-50;
+    border: 1.5px solid var(--color-border);
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+
+  .btn-secondary:hover {
+    transform: scale(1.02);
+  }
+
+  .btn-secondary:active {
+    transform: scale(0.98);
+  }
+
+  .btn-secondary:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-red-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-red-700 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:scale-100;
+    box-shadow: 0 2px 6px rgba(220, 38, 38, 0.25);
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+
+  .btn-danger:hover {
+    transform: scale(1.02);
+  }
+
+  .btn-danger:active {
+    transform: scale(0.98);
+  }
+
+  .btn-danger:focus-visible {
+    outline: 2px solid var(--color-danger-500);
+    outline-offset: 2px;
+  }
+
+  .btn-success {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-emerald-600 px-5 py-2.5 text-sm font-semibold text-white hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:scale-100;
+    box-shadow: 0 2px 6px rgba(5, 150, 105, 0.25);
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+
+  .btn-success:hover {
+    transform: scale(1.02);
+  }
+
+  .btn-success:active {
+    transform: scale(0.98);
+  }
+
+  .btn-success:focus-visible {
+    outline: 2px solid var(--color-success-500);
+    outline-offset: 2px;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-transparent px-5 py-2.5 text-sm font-semibold transition-all duration-200 hover:scale-[1.02] active:scale-[0.98];
+    color: var(--color-primary-500);
+    border: 1.5px solid var(--color-primary-200);
+  }
+
+  .btn-outline:hover {
+    background: var(--color-primary-50);
+    border-color: var(--color-primary-400);
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     CHIPS — filter tags, category pills
+     ══════════════════════════════════════════════════════════════════════════ */
+  .chip {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-xs font-semibold cursor-pointer transition-all duration-150;
+    border: 1.5px solid var(--color-border);
+    color: #475569;
+    background: white;
+  }
+
+  .chip:hover {
+    border-color: var(--color-primary-200);
+    color: var(--color-primary-600);
+    background: var(--color-primary-50);
+  }
+
+  .chip.active,
+  .chip[data-active="true"] {
+    border-color: var(--color-primary-500);
+    color: white;
+    background: var(--color-primary-500);
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     BADGES
+     ══════════════════════════════════════════════════════════════════════════ */
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold;
+  }
+
+  .badge-success,
+  .badge-green {
+    @apply bg-emerald-100 text-emerald-700;
+  }
+
+  .badge-warning,
+  .badge-yellow {
+    @apply bg-amber-100 text-amber-700;
+  }
+
+  .badge-danger,
+  .badge-red {
+    @apply bg-red-100 text-red-700;
+  }
+
+  .badge-info,
+  .badge-blue {
+    @apply bg-blue-100 text-blue-700;
+  }
+
+  .badge-gray {
+    @apply bg-slate-100 text-slate-600;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     ALERTS
+     ══════════════════════════════════════════════════════════════════════════ */
+  .alert {
+    @apply rounded-xl px-4 py-3 text-sm;
+    border: 1px solid;
+  }
+
+  .alert-error {
+    @apply border-red-200 bg-red-50 text-red-700;
+  }
+
+  .alert-success {
+    @apply border-emerald-200 bg-emerald-50 text-emerald-700;
+  }
+
+  .alert-info {
+    @apply border-blue-200 bg-blue-50 text-blue-700;
+  }
+
+  .alert-warning {
+    @apply border-amber-200 bg-amber-50 text-amber-700;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     TABLE
+     ══════════════════════════════════════════════════════════════════════════ */
+  .table-wrap {
+    @apply overflow-x-auto rounded-2xl bg-white;
+    border: 1px solid var(--color-border);
+  }
+
+  .table-wrap table {
+    @apply w-full border-collapse text-sm;
+  }
+
+  .table-wrap thead tr {
+    border-bottom: 2px solid var(--color-border);
+    background: #f0f5ff;
+    /* subtle blue tint */
+  }
+
+  .table-wrap th {
+    @apply px-4 py-3 text-left text-xs font-semibold uppercase tracking-wider text-slate-500;
+  }
+
+  .table-wrap td {
+    @apply px-4 py-3 text-sm text-slate-700;
+  }
+
+  .table-wrap tbody tr {
+    @apply transition-colors;
+    border-bottom: 1px solid #f1f5f9;
+  }
+
+  .table-wrap tbody tr:hover {
+    background: #f8faff;
+    /* subtle blue tint on hover */
+  }
+
+  .table-wrap .table-empty {
+    @apply py-12 text-center text-slate-400;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     LOADING / SKELETON / SPINNER
+     ══════════════════════════════════════════════════════════════════════════ */
+  .loading-center {
+    @apply flex items-center justify-center py-12;
+  }
+
+  .skeleton {
+    @apply rounded-xl;
+    background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+  }
+
+  .skeleton-text {
+    @apply rounded h-4;
+    background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 50%, #e2e8f0 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s ease-in-out infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+  .spinner {
+    @apply inline-block h-5 w-5 rounded-full border-2 border-emerald-200;
+    border-top-color: var(--color-primary-500);
+    animation: spin 0.6s linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     SUMMARY BAR — inline stat indicators for pharma/admin
+     ══════════════════════════════════════════════════════════════════════════ */
+  .summary-bar {
+    @apply flex flex-wrap items-center gap-3 rounded-xl bg-white px-4 py-2.5 mb-4 text-sm;
+    border: 1px solid var(--color-border);
+  }
+
+  .summary-bar .stat {
+    @apply inline-flex items-center gap-1.5;
+  }
+
+  .summary-bar .stat-label {
+    @apply text-slate-500;
+  }
+
+  .summary-bar .stat-value {
+    @apply font-bold text-slate-900;
+  }
+
+  .summary-bar .divider {
+    @apply w-px h-4 bg-slate-200;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     FOOTER
+     ══════════════════════════════════════════════════════════════════════════ */
+  .shop-footer {
+    @apply mt-auto border-t py-6 text-center text-xs text-slate-400;
+    border-color: var(--color-border);
+    background: white;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     ACCESSIBILITY — focus ring utility
+     ══════════════════════════════════════════════════════════════════════════ */
+  .focus-ring:focus-visible {
+    outline: 2px solid var(--color-primary-500);
+    outline-offset: 2px;
+  }
+
+  /* ══════════════════════════════════════════════════════════════════════════
+     MOTION UTILITIES
+     ══════════════════════════════════════════════════════════════════════════ */
+  .hover-elevate {
+    transition: transform var(--duration-fast) var(--ease-out),
+      box-shadow var(--duration-fast) var(--ease-out);
+  }
+
+  .hover-elevate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .status-pulse {
+    animation: pulse-ring 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-ring {
+
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgba(27, 116, 228, 0.4);
+    }
+
+    50% {
+      box-shadow: 0 0 0 6px rgba(27, 116, 228, 0);
+    }
+  }
+
+  .btn-warning {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-5 py-2.5 text-sm font-semibold text-white hover:bg-amber-600 disabled:cursor-not-allowed disabled:opacity-60;
+    background: var(--color-warning-500);
+    box-shadow: 0 2px 6px rgba(245, 158, 11, 0.25);
+    transition: all var(--duration-fast) var(--ease-out);
+  }
+
+  .btn-warning:hover {
+    transform: scale(1.02);
+  }
+
+  .btn-warning:active {
+    transform: scale(0.98);
+  }
+
+  .btn-warning:focus-visible {
+    outline: 2px solid var(--color-warning-500);
+    outline-offset: 2px;
+  }
+}

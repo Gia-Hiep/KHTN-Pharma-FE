@@ -1,0 +1,11 @@
+// File: src/apis/index.js — Barrel export for all API modules
+export { CatalogApi }   from './catalog.api';
+export { InventoryApi } from './inventory.api';
+export { OrderApi }     from './order.api';
+export { SalesApi }     from './sales.api';
+export { CustomerApi }  from './customer.api';
+export { PurchaseApi }  from './purchase.api';
+export { AuthApi }      from './auth.api';
+export { ChatApi }      from './chat.api';
+export { ChatbotApi }   from './chatbot.api';
+export { ReportApi }    from './report.api';
