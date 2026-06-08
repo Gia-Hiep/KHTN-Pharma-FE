@@ -1,4 +1,3 @@
-// File: src/apis/cart.api.js
 import { createHttp } from './createHttp';
 import { SERVICE_URLS } from './serviceUrls';
 

@@ -1,4 +1,3 @@
-// File: src/pages/pharma/InvoiceDetailPage.jsx
 import { useEffect, useState, useMemo } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, FileText, User, CreditCard, Package } from 'lucide-react';

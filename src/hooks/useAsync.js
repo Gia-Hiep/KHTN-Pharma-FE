@@ -1,4 +1,3 @@
-// File: src/hooks/useAsync.js
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 /**

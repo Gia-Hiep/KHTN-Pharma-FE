@@ -1,4 +1,3 @@
-// File: src/pages/shop/SupportChatPage.jsx
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { ChatApi } from '../../apis';
 import { useAuth } from '../../hooks/useAuth';

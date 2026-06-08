@@ -1,4 +1,3 @@
-// File: src/components/ui/Table.jsx
 export function Table({ columns = [], rows = [], keyField = 'id', emptyText = 'Không có dữ liệu' }) {
   return (
     <div className="table-wrap">

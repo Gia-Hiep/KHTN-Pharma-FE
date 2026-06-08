@@ -1,4 +1,3 @@
-// File: src/layouts/components/TopBar.jsx
 import { useNavigate } from 'react-router-dom';
 import { LogOut, Bell, Search } from 'lucide-react';
 import { useAuth } from '../../hooks/useAuth';

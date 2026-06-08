@@ -1,4 +1,3 @@
-// File: src/components/ui/Modal.jsx
 import { useEffect, useRef, useCallback } from 'react';
 
 const SIZES = {

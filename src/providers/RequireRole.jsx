@@ -1,4 +1,3 @@
-// File: src/providers/RequireRole.jsx
 import { Navigate } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 

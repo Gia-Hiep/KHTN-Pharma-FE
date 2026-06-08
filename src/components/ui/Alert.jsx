@@ -1,4 +1,3 @@
-// File: src/components/ui/Alert.jsx
 import { CheckCircle2, AlertTriangle, X } from 'lucide-react';
 
 const VARIANTS = {

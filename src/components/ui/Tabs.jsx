@@ -1,4 +1,3 @@
-// File: src/components/ui/Tabs.jsx
 import { useState, useRef, useEffect, useCallback } from 'react';
 
 /**

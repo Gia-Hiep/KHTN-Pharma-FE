@@ -1,4 +1,3 @@
-// File: src/apis/purchase.api.js
 import { createHttp } from './createHttp';
 import { SERVICE_URLS } from './serviceUrls';
 const http = createHttp(SERVICE_URLS.purchase);

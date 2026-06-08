@@ -1,4 +1,3 @@
-// File: src/apis/index.js — Barrel export for all API modules
 export { CatalogApi }   from './catalog.api';
 export { InventoryApi } from './inventory.api';
 export { OrderApi }     from './order.api';

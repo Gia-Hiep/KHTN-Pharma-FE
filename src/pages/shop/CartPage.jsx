@@ -1,4 +1,3 @@
-// File: src/pages/shop/CartPage.jsx
 /**
  * CART — Checkout với QR VietQR và Stripe Elements
  * ---------------------------------------------------

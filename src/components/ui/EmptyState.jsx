@@ -1,4 +1,3 @@
-// File: src/components/ui/EmptyState.jsx
 import { PackageOpen } from 'lucide-react';
 
 export function EmptyState({

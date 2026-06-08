@@ -1,4 +1,3 @@
-// File: src/pages/pharma/SupportInboxPage.jsx
 /**
  * PHARMACIST/ADMIN: Inbox hỗ trợ khách hàng.
  * Dùng API /chat/support/inbox (backend: ChatController.getPharmacistInbox).

@@ -1,4 +1,3 @@
-// File: src/layouts/PharmaLayout.jsx
 import { Outlet } from 'react-router-dom';
 import { SideNav } from './components/SideNav';
 import { TopBar } from './components/TopBar';

@@ -1,4 +1,3 @@
-// File: src/providers/RequireAuth.jsx
 import { Navigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../hooks/useAuth';
 

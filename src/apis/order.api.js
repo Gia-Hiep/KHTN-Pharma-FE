@@ -1,4 +1,3 @@
-// File: src/apis/order.api.js
 import { createHttp } from './createHttp';
 import { SERVICE_URLS } from './serviceUrls';
 

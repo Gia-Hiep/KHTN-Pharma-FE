@@ -1,4 +1,3 @@
-// File: src/pages/shop/WalletPage.jsx
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { WalletApi } from '../../apis/wallet.api';

@@ -1,4 +1,3 @@
-// File: src/components/ui/Tooltip.jsx
 import { useState, useRef, useId } from 'react';
 
 /**

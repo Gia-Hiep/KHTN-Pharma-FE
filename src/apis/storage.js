@@ -1,4 +1,3 @@
-// File: src/apis/storage.js
 const TOKEN_KEY = 'access_token';
 
 export const tokenStorage = {

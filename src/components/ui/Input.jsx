@@ -1,4 +1,3 @@
-// File: src/components/ui/Input.jsx
 let inputIdCounter = 0;
 
 export function Input({ label, id, error, hint, className = '', ...props }) {

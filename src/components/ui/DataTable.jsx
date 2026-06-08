@@ -1,4 +1,3 @@
-// File: src/components/ui/DataTable.jsx
 
 /**
  * Full-featured data table with loading, empty, responsive card view, and accessibility.

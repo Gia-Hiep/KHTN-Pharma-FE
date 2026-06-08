@@ -1,4 +1,3 @@
-// File: src/pages/pharma/CustomersPage.jsx
 import { useState, useEffect, useCallback } from 'react';
 import { Pencil, Eye, ClipboardList, Wallet, Star, Package, ArrowLeft } from 'lucide-react';
 import { CustomerApi, SalesApi } from '../../apis';

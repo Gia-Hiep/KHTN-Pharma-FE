@@ -1,4 +1,3 @@
-// File: src/pages/admin/UsersPage.jsx
 import { useEffect, useState, useCallback } from 'react';
 import { Search, Plus, Pencil, Key, Shield, Power, X } from 'lucide-react';
 import { AuthApi } from '../../apis';

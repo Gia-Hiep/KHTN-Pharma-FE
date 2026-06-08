@@ -1,4 +1,3 @@
-// File: src/components/ui/SearchInput.jsx
 import { Search, X } from 'lucide-react';
 
 export function SearchInput({ value, onChange, placeholder = 'Tìm kiếm...', className = '' }) {

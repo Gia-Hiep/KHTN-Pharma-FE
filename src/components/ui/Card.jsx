@@ -1,4 +1,3 @@
-// File: src/components/ui/Card.jsx
 
 export function Card({ children, header, footer, className = '', hoverable = false, highlight = false, onClick, ...props }) {
   return (

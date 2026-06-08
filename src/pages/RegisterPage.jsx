@@ -1,4 +1,3 @@
-// File: src/pages/RegisterPage.jsx
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { AuthApi } from '../apis';

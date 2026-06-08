@@ -1,4 +1,3 @@
-// File: src/pages/admin/ChatbotFaqPage.jsx
 import { useCallback, useEffect, useState } from 'react';
 import { Search, Plus, Pencil, Trash2, X, Bot, Tag, Hash } from 'lucide-react';
 import { ChatbotApi } from '../../apis';

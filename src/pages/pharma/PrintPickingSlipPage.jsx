@@ -1,4 +1,3 @@
-// File: src/pages/pharma/PrintPickingSlipPage.jsx
 /**
  * Phiếu soạn hàng cho đơn online BUYER.
  * Trang này dùng riêng cho buyer order, KHÔNG dùng cho invoice POS nội bộ.

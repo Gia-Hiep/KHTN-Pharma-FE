@@ -1,4 +1,3 @@
-// File: src/apis/serviceUrls.js
 /**
  * Per-service base URLs — microservices port mapping.
  * Override via .env (VITE_*_API_URL).

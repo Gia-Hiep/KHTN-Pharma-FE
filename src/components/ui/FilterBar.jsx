@@ -1,4 +1,3 @@
-// File: src/components/ui/FilterBar.jsx
 
 /**
  * Container for search inputs, selects, and filter buttons.

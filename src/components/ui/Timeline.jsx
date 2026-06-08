@@ -1,4 +1,3 @@
-// File: src/components/ui/Timeline.jsx
 import { Check } from 'lucide-react';
 
 /**

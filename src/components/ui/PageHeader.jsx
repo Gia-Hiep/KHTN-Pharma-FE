@@ -1,4 +1,3 @@
-// File: src/components/ui/PageHeader.jsx
 export function PageHeader({ title, subtitle, actions, className = '' }) {
   return (
     <div className={`mb-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between ${className}`}>

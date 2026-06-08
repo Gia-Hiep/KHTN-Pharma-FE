@@ -1,4 +1,3 @@
-// File: src/pages/pharma/PharmacistOrderDetailPage.jsx
 import { useState, useEffect, useMemo } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ClipboardCheck, CheckCircle2, Package, PackageCheck, Truck, PartyPopper, XCircle, Ban, RotateCcw, Pill, Printer, Save, ArrowLeft } from 'lucide-react';

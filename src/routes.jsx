@@ -1,4 +1,3 @@
-// File: src/routes.jsx
 import { createBrowserRouter, Navigate } from 'react-router-dom';
 
 import { RequireAuth } from './providers/RequireAuth';

@@ -1,4 +1,3 @@
-// File: src/components/ui/StatCard.jsx
 
 const COLORS = {
   blue:    { bg: 'bg-blue-50',    border: 'border-blue-100',    icon: 'text-blue-600',    value: 'text-blue-700' },

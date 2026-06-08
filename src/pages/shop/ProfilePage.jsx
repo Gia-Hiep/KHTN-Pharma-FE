@@ -1,4 +1,3 @@
-// File: src/pages/shop/ProfilePage.jsx
 import { useState, useEffect, useCallback } from 'react';
 import { AuthApi } from '../../apis';
 import { toast } from 'react-toastify';

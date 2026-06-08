@@ -1,4 +1,3 @@
-// File: src/components/ui/Skeleton.jsx
 
 export function Skeleton({ className = '', lines = 1 }) {
   if (lines === 1) {

@@ -1,4 +1,3 @@
-// File: src/pages/pharma/PharmacistOrdersPage.jsx
 import { useEffect, useState } from 'react';
 import { AlertTriangle } from 'lucide-react';
 import { OrderApi } from '../../apis/order.api';

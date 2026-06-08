@@ -1,4 +1,3 @@
-// File: src/layouts/components/SideNav.jsx
 import { NavLink } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 import { useState } from 'react';

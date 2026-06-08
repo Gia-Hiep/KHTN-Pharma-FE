@@ -1,4 +1,3 @@
-// File: src/pages/admin/PoliciesPage.jsx
 import { useState, useEffect } from 'react';
 import { DollarSign, Ticket, Plus, Trash2, RefreshCw, Search } from 'lucide-react';
 import { CatalogApi, CustomerApi } from '../../apis';

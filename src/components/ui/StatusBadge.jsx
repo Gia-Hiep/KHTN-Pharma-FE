@@ -1,4 +1,3 @@
-// File: src/components/ui/StatusBadge.jsx
 
 /**
  * Reusable status badge with color-coded variants.

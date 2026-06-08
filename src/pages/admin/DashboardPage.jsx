@@ -1,4 +1,3 @@
-// File: src/pages/admin/DashboardPage.jsx
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { DollarSign, Package, TrendingUp, AlertTriangle, XCircle, Trophy, BarChart3, Settings, Users, MessageCircle, ChevronRight } from 'lucide-react';

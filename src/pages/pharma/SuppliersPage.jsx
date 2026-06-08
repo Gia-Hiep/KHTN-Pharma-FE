@@ -1,4 +1,3 @@
-// File: src/pages/pharma/SuppliersPage.jsx
 import { useState, useEffect, useCallback } from 'react';
 import { Pencil, Trash2 } from 'lucide-react';
 import { PurchaseApi } from '../../apis';

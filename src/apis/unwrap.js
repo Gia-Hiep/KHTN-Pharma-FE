@@ -1,4 +1,3 @@
-// File: src/apis/unwrap.js
 /**
  * Unwrap Spring Boot API responses.
  * If response is { data: ..., message: ... }, return the nested data.

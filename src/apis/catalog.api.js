@@ -1,4 +1,3 @@
-// File: src/apis/catalog.api.js
 import { createHttp } from './createHttp';
 import { SERVICE_URLS } from './serviceUrls';
 

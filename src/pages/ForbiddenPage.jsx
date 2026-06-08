@@ -1,4 +1,3 @@
-// File: src/pages/ForbiddenPage.jsx
 import { Link } from 'react-router-dom';
 
 export function ForbiddenPage() {

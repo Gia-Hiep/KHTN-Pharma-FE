@@ -1,4 +1,3 @@
-// File: src/components/ui/JsonBox.jsx
 export function JsonBox({ data, label }) {
   return (
     <div>

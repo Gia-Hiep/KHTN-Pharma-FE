@@ -1,4 +1,3 @@
-// File: src/pages/shop/FaqPage.jsx
 import { useEffect, useState, useCallback } from 'react';
 import { ChatbotApi } from '../../apis';
 import { useAsync } from '../../hooks/useAsync';

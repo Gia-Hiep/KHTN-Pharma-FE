@@ -1,4 +1,3 @@
-// File: src/pages/shop/BuyerOrdersPage.jsx
 import { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { ShoppingBag, ChevronRight, AlertTriangle, RefreshCw } from 'lucide-react';

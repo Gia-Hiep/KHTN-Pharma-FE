@@ -1,4 +1,3 @@
-// File: src/components/ui/Badge.jsx
 
 const VARIANTS = {
   success: 'bg-emerald-100 text-emerald-700',

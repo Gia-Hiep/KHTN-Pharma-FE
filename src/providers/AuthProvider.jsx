@@ -1,4 +1,3 @@
-// File: src/providers/AuthProvider.jsx
 import { createContext, useCallback, useEffect, useMemo, useState } from 'react';
 
 export const AuthContext = createContext(null);

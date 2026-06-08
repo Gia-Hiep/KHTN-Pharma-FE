@@ -1,4 +1,3 @@
-// File: src/pages/pharma/PrintInvoicePage.jsx
 // Trang in phiếu soạn/đóng gói — standalone (không dùng AdminLayout)
 // Truy cập: /print/invoices/:id
 import { useEffect, useState } from 'react';

@@ -1,4 +1,3 @@
-// File: src/pages/admin/ReportsPage.jsx
 import { useEffect, useMemo, useState } from 'react';
 import {
   BarChart3,
